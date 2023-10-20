@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 
 class circle extends StatelessWidget {
   final String img;
-  final bool online=false;
+  final bool online;
 
-  const circle({super.key, required this.img,required online});
+  const circle({super.key, required this.img, required this.online});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class circle extends StatelessWidget {
         backgroundImage: AssetImage(img),
         radius: 28,
       ),
-      online==false?
+      online==true?
       Positioned(
           left: 40,
           top: 3,
